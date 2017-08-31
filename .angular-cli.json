@@ -5,11 +5,11 @@
   },
   "apps": [
     {
-      "root": "src",
-      "outDir": "dist",
+      "root": "frontend_app",
+      "outDir": "dist/public",
       "assets": [
         "assets",
-        "favicon.ico"
+        "assets/favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -36,11 +36,11 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json",
+      "project": "frontend_app/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json",
+      "project": "frontend_app/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {
