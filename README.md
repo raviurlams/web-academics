@@ -15,13 +15,16 @@ A School Management System (SMS)
     
     ```   
     npm install
+
+    ng build
+
+    npm run dev 
+    
     ```
     
 4. Start the app in the browser
-    ```
-    npm run dev    : For Local
-
-    npm run prod   : for production 
+    ``` 
+    npm run prod   : For Production 
 
     ```   
 
