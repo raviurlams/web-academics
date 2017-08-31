@@ -16,7 +16,7 @@ A School Management System (SMS)
    C:\Program Files\MongoDB\Server\3.4\bin  :: mongod.exe
 
 
-4. Install the dependencies
+4. Install and Compile the dependencies
     
     ```   
     npm install
