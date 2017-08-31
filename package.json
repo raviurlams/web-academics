@@ -11,7 +11,8 @@
     "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p backend-app\" \"nodemon dist/backend-app/app.js\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\"",
     "lint": "ng lint",
-    "lintbe": "tslint backend-app/**/**.ts{,x}"
+    "lintbe": "tslint backend-app/**/**.ts{,x}",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "angular-cli": {},
@@ -54,5 +55,9 @@
     "tslint": "~5.3.2",
     "typescript": "~2.3.3",
     "zone.js": "^0.8.14"
+  },
+  "engines": {
+  "node": "6.9.5",
+  "npm": "5.3.0"
   }
 }
