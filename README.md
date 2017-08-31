@@ -38,3 +38,6 @@ A School Management System (SMS)
     npm run prod   : For Production 
 
     ```   
+
+
+MONGODB_URI=mongodb://localhost:27017/web-academics
