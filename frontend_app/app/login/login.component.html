@@ -1,7 +1,7 @@
 <div class="jumbotron bg-transparent text-center">
   <div *ngIf="!user" class="card text-center">
     <h6 class="card-header">
-      Social Login Demo
+      Login
     </h6>
     <div class="card-block">
       <h4 class="card-title">Not signed in</h4>
@@ -14,7 +14,7 @@
   </div>
   <div *ngIf="user" class="card text-center">
     <h6 class="card-header">
-      Social Login Demo
+      Login
     </h6>
     <div class="card-block"></div>
     <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">

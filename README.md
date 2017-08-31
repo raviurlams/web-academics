@@ -34,7 +34,6 @@ A School Management System (SMS)
 
     npm run dev 
 
-
     npm run prod   : For Production 
 
     ```   
