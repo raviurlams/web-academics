@@ -11,8 +11,7 @@
     "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p backend-app\" \"nodemon dist/backend-app/app.js\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\"",
     "lint": "ng lint",
-    "lintbe": "tslint backend-app/**/**.ts{,x}",
-    "postinstall": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\""
+    "lintbe": "tslint backend-app/**/**.ts{,x}"    
   },
   "private": true,
   "angular-cli": {},
