@@ -39,5 +39,5 @@ A School Management System (SMS)
 
     ```   
 
-
-MONGODB_URI=mongodb://localhost:27017/web-academics
+7.Production DB
+mongodb://root:root@ds111204.mlab.com:11204/web-academics
