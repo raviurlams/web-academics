@@ -12,7 +12,7 @@
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\"",
     "lint": "ng lint",
     "lintbe": "tslint backend-app/**/**.ts{,x}",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\""
   },
   "private": true,
   "angular-cli": {},
