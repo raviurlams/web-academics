@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { UserService } from '../services/user.service';
-import { ToastComponent } from '../shared/toast/toast.component';
+import { adminService } from '../admin.service';
+import { ToastComponent } from '../../shared/toast/toast.component';
 
 @Component({
   selector: 'app-register',
@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               public toast: ToastComponent,
-              private userService: UserService) { }
+              private adminService: adminService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.userService.register(this.registerForm.value).subscribe(
+    this.adminService.register(this.registerForm.value).subscribe(
       res => {
         this.toast.setMessage('you successfully registered!', 'success');
         this.router.navigate(['/register']);

@@ -20,6 +20,8 @@ A School Management System (SMS)
     
     ```   
     npm install
+    
+    ng build
 
     npm run prod 
     
