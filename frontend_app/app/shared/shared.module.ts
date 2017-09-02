@@ -6,25 +6,17 @@ import { CommonModule, DecimalPipe, CurrencyPipe } from '@angular/common';
 import { ToastComponent } from './toast/toast.component';
 import { LoadingComponent } from './loading/loading.component';
 
-import {MdButtonModule, MdCheckboxModule,MdInputModule} from '@angular/material';
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
-    MdButtonModule, 
-    MdCheckboxModule,
-    MdInputModule 
+    HttpModule   
   ],
   exports: [
     // Shared Components
     ToastComponent,
-    LoadingComponent,
-    MdButtonModule, 
-    MdCheckboxModule,
-    MdInputModule,
+    LoadingComponent,    
     DecimalPipe,
     CurrencyPipe
   ],

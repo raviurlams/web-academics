@@ -14,3 +14,18 @@
   width: 20rem;
   margin: 0 auto;
 }
+
+.margin {
+  margin: 0 !important;
+}
+
+.social-google {
+    background-color: #da573b;
+    border-color: #be5238;
+}
+.social-login-btn {
+    margin: 5px;
+    width: 32%;
+    font-size: 250%;
+    padding: 0;
+}

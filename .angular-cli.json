@@ -1,47 +1,49 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "web-academics"
-  },
-  "apps": [
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project":
     {
-      "root": "frontend_app",
-      "outDir": "dist/public",
-      "assets": [
-        "assets",
-        "assets/favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",      
-      "tsconfig": "tsconfig.app.json",      
-      "prefix": "app",
-      "styles": [
-        "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/font-awesome/css/font-awesome.min.css",
-        "styles.css"
-      ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/tether/dist/js/tether.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
-      ],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
-    }
-  ],
-  "lint": [
+        "name": "web-academics"
+    },
+    "apps": [
     {
-      "project": "frontend_app/tsconfig.app.json",
-      "exclude": "**/node_modules/**"
+        "root": "frontend_app",
+        "outDir": "dist/public",
+        "assets": [
+            "assets",
+            "assets/favicon.ico"
+        ],
+        "index": "index.html",
+        "main": "main.ts",
+        "polyfills": "polyfills.ts",
+        "tsconfig": "tsconfig.app.json",
+        "prefix": "app",
+        "styles": [
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "../node_modules/font-awesome/css/font-awesome.min.css",            
+            "styles.css"
+        ],
+        "scripts": [
+            "../node_modules/jquery/dist/jquery.min.js",
+            "../node_modules/tether/dist/js/tether.min.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "../frontend_app/assets/js/materialize.min.js"           
+        ],
+        "environmentSource": "environments/environment.ts",
+        "environments":
+        {
+            "dev": "environments/environment.ts",
+            "prod": "environments/environment.prod.ts"
+        }
+    }],
+    "lint": [
+    {
+        "project": "frontend_app/tsconfig.app.json",
+        "exclude": "**/node_modules/**"
+    }],
+    "defaults":
+    {
+        "styleExt": "css",
+        "component":
+        {}
     }
-  ],  
-  "defaults": {
-    "styleExt": "css",
-    "component": {}
-  }
 }

@@ -6,7 +6,7 @@ import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-logi
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
+  templateUrl: './login-new.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
