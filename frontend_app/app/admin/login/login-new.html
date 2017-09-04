@@ -1,64 +1,67 @@
-<div id="login-page" class="row">
-  <div class="col s12 z-depth-6 card-panel" *ngIf="!user">
-    <form class="login-form">
+<div id="login-page" class="row" *ngIf="!user">
+  <div class="col s12 z-depth-6 card-panel">
+    <form class="login-form" action="#">
       <div class="row">
         <div class="input-field col s12 center">
-          <img src="/assets/images/media-20170901.png" alt="" style="height:100px;width:150px" class="responsive-img valign img-circle img-thumbnail profile-image-login">
-          <p class="center login-form-text">Web Academics Login</p>
+          <h4><strong>Welcome.</strong> Please login.</h4>
         </div>
       </div>
       <div class="row margin">
         <div class="input-field col s12">
-          <i class="material-icons prefix">lock_outline</i>
+          <i class="material-icons prefix">account_box</i>
           <input class="validate" id="email" type="email">
           <label for="email" data-error="wrong" data-success="right" class="center-align">Email</label>
         </div>
       </div>
       <div class="row margin">
-        <div class="input-field col s12">          
-          <i class="material-icons prefix">email</i>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock_outline</i>
           <input id="password" type="password">
           <label for="password">Password</label>
         </div>
       </div>
       <div class="row">
-         <p>
-          <input type="checkbox" id="test5" />
-          <label for="test5">Remember me</label>
-        </p>
+        <div class="col s12 m12 l12">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <a class="btn waves-effect waves-light col s12">Login</a>
+          <a href="#" class="btn waves-effect waves-light col s12">Login</a>
         </div>
       </div>
-     
-      <div class="row text-center text-primary">
-        Sign in with 
-      </div>
       <div class="row">
-      <div class="input-field col s6 m6 l6">
-      <a class="btn btn-primary social-login-btn social-facebook" (click)="signInWithFB()"><i class="fa fa-facebook"></i></a>
+        <div class="input-field col s6 m6 l6">
+          <p class="margin medium-small"><a href="register.html">Register Now!</a></p>
+        </div>
+        <div class="input-field col s6 m6 l6">
+          <p class="margin right-align medium-small"><a href="forgot-password.html">Forgot password?</a></p>
+        </div>
       </div>
-      <div class="input-field col s6 m6 l6">
-      <a class="btn btn-primary social-login-btn social-google" (click)="signInWithGoogle()"><i class="fa fa-google-plus"></i></a>
-      </div>
+      <p><span class="btn-round">or</span></p>
+      <div class="row icons-center">
+        <a class="waves-effect waves-light btn-floating social google" (click)="signInWithGoogle()">
+          <i class="fa fa-google"></i> Sign in with Google
+        </a>
+        <a class="waves-effect waves-light btn-floating social facebook" (click)="signInWithFB()">
+            <i class="fa fa-facebook"></i> Sign in with facebook
+        </a>
       </div>
     </form>
   </div>
-
-  <div *ngIf="user" class="card text-center">
-    <h6 class="card-header">
+</div>
+<div *ngIf="user" class="card text-center">
+  <h6 class="card-header">
       Login
     </h6>
-    <div class="card-block"></div>
-    <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
-    <div class="card-block">
-      <h4 class="card-title">{{ user.name }}</h4>
-      <p class="card-text">{{ user.email }}</p>
-    </div>
-    <div class="card-block">
-      <button class="btn btn-danger" (click)="signOut()">Sign out</button>
-    </div>
+  <div class="card-block"></div>
+  <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+  <div class="card-block">
+    <h4 class="card-title">{{ user.name }}</h4>
+    <p class="card-text">{{ user.email }}</p>
+  </div>
+  <div class="card-block">
+    <button class="btn btn-danger" (click)="signOut()">Sign out</button>
   </div>
 </div>
