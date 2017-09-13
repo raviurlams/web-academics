@@ -46,6 +46,7 @@ export class AuthService {
   }
 
   setCurrentUser(decodedUser) {
+    if(!decodedUser){return false}
     this.loggedIn = true;
     this.currentUser._id = decodedUser._id;
     this.currentUser.username = decodedUser.username;
