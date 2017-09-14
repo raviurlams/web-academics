@@ -6,12 +6,12 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start": "node dist/backend-app/app.js",
-    "predev": "tsc -p backend-app",
-    "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p backend-app\" \"nodemon dist/backend-app/app.js\"",
-    "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend-app && node dist/backend-app/app.js\"",
+    "start": "node dist/backend_app/app.js",
+    "predev": "tsc -p backend_app",
+    "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p backend_app\" \"nodemon dist/backend_app/app.js\"",
+    "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p backend_app && node dist/backend_app/app.js\"",
     "lint": "ng lint",
-    "lintbe": "tslint backend-app/**/**.ts{,x}"
+    "lintbe": "tslint backend_app/**/**.ts{,x}"
   },
   "private": true,
   "angular-cli": {},
